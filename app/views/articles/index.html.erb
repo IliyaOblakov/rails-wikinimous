@@ -1,0 +1,8 @@
+<div class="container">
+  <ul id="show" class="list-group">
+  <% @articles.each do |article|%>
+    <h3><li><%= link_to article.title, article_path(article.id), {:style=>"text-decoration: none; color: #337ab7; ", :class => "css_class"} %></li></h3>
+    <p> <%=article.content %></p>
+  <%end %>
+  </ul>
+</div>
